@@ -240,7 +240,7 @@ Para simular o cenário de alta concorrência da Black Friday e validar a resili
 ```bash
 docker run --rm -i \
   --add-host=host.docker.internal:host-gateway \
-  grafana/k6 run - < k6-spike-test.js
+  grafana/k6 run - < tests/k6/k6-spike-test.js
 ```
 
 > **Nota de Performance**: O script de estresse injeta múltiplos VUs (até 50 usuários virtuais simultâneos). Por o endpoint ser assíncrono (`202 Accepted`), a API responde de imediato enquanto o Temporal gerencia a fila `CHECKOUT_TASK_QUEUE` em segundo plano sem travar o servidor.
