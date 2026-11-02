@@ -1,16 +1,18 @@
-# Compiled class file
+# ==========================================
+# ☕ Java & Bytecode Compilado
+# ==========================================
 *.class
-
-# Log file
 *.log
-
-# BlueJ files
 *.ctxt
-
-# Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+# Crash logs da JVM
+hs_err_pid*
+replay_pid*
+
+# ==========================================
+# 📦 Pacotes & Artefatos de Build
+# ==========================================
 *.jar
 *.war
 *.nar
@@ -19,6 +21,91 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# Exceção para wrappers se utilizar (permite commitar o wrapper executável do Maven/Gradle)
+!**/src/main/**/runtime/*.jar
+!**/gradle-wrapper.jar
+!**/.mvn/wrapper/maven-wrapper.jar
+
+# ==========================================
+# 🔨 Build Tools: Maven & Gradle
+# ==========================================
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+.mvn/timing.properties
+
+# Gradle
+.gradle/
+build/
+out/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# ==========================================
+# 💻 IDEs & Editores de Código
+# ==========================================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# Eclipse
+.settings/
+.classpath
+.project
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+
+# ==========================================
+# 🍃 Spring Boot & Configurações de Ambiente
+# ==========================================
+# Arquivos com senhas ou perfis locais
+.env
+.env.local
+application-local.properties
+application-local.yml
+application-local.yaml
+
+# ==========================================
+# 🖥️ Arquivos Temporários de Sistema Operacional
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
